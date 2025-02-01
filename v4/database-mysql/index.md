@@ -33,6 +33,8 @@ end
 By default, MySQL database dumps produce a single output file created using the `mysqldump` utility.
 This dump file will be stored within your final backup _package_ as `databases/MySQL.sql`.
 
+To pass the database password, the environment variable `MYSQL_PWD` is used to avoid a warning about using an insecure command-line interface.
+
 If a `Compressor` has been added to the backup, the database dump will be piped through
 the selected compressor. So, if `Gzip` is the selected compressor, the output would be `databases/MySQL.sql.gz`.
 
